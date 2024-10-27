@@ -65,9 +65,7 @@ class Simulator():
             self.Server.aggregation(self.Clients_list, sampled_clients)
 
 
-            if self.args.th_update == 1:
-                for client in self.Clients_list:
-                    client.th_update(self.Server.global_difference)
+            client.th_update(self.Server.global_difference)
 
             for client_idx, client in enumerate(self.Clients_list):
                 acc, loss, density = client.local_test()

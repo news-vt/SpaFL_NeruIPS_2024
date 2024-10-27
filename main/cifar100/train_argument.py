@@ -33,7 +33,6 @@ def parser():
     parser.add_argument('--weight_decay', type=float, default=0, help="SGD weight decay(defalt: 0.)")
     parser.add_argument('--local_epoch', type=int, default = 3, help = "number of local iterations (default = 3)")
     parser.add_argument('--penalty_scheduler', type = int, default = 1, help = "when will you recover penalty")
-    parser.add_argument('--th_update', type = int, default =1, help = 'extact importance from global thresholds')
     parser.add_argument('--clip', type = int, default =1, help = 'grad clip')
 
     return parser.parse_args()
