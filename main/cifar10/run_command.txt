@@ -1,0 +1,2 @@
+CIFAR-10 with conv4: python train.py --affix grad_clip_3_seed_1_conv4 --model conv4 --learning_rate 0.01 --th_coeff 0.00015 --batch_size 16 --alpha 0.1 --local_ep 5 --clip 3 --seed 1
+CIFAR-10 with ViT: python train.py --model vit --batch_size 16 --comm_rounds 500 --learning_rate 0.01 --seed 1 --alpha 0.1 --th_coeff 0.0001 --local_epoch 1 --clip 3

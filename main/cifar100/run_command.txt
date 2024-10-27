@@ -1,0 +1,1 @@
+python train.py --model resnet18 --comm_rounds 1500 --learning_rate 0.01 --lr_decay 0.993 --seed 1 --th_coeff 0.0007 --local_epoch 7 --th_update 1 --clip 15 --seed 1

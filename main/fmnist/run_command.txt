@@ -1,0 +1,1 @@
+python train.py --learning_rate 0.001 --th_coeff 0.002 --local_epoch 5 --seed 1

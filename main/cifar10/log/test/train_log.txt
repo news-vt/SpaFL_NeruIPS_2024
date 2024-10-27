@@ -1,0 +1,47 @@
+model            : conv4_bn
+dataset          : cifar10
+data_root        : data
+log_root         : log
+model_root       : checkpoint
+load_checkpoint  : ./model/default/model.pth
+affix            : test
+num_clients      : 100
+schedulingsize   : 10
+batch_size       : 64
+comm_rounds      : 500
+learning_rate    : 0.001
+lr_decay         : 1
+momentum         : 0.9
+gpu              : 0
+seed             : 1
+alpha            : 0.2
+th_coeff         : 0.002
+mask             : 1
+weight_decay     : 0.0
+local_epoch      : 5
+penalty_scheduler : 1
+th_update        : 1
+log_folder       : log\test
+model_folder     : checkpoint\test
+masked_Conv4_BN(
+  (conv1): MaskedConv2d()
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv2): MaskedConv2d()
+  (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv3): MaskedConv2d()
+  (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv4): MaskedConv2d()
+  (bn4): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dense1): MaskedMLP()
+  (bn5): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dense2): MaskedMLP()
+  (bn6): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dense3): MaskedMLP()
+)
+------------------------------Epoch start------------------------------
+round: 0, avg_acc: 14.812, avg_density: 1.000, spent: 24.91
+------------------------------Epoch start------------------------------
+round: 1, avg_acc: 18.179, avg_density: 1.000, spent: 16.48
+------------------------------Epoch start------------------------------
+round: 2, avg_acc: 23.885, avg_density: 1.000, spent: 21.59
+------------------------------Epoch start------------------------------
